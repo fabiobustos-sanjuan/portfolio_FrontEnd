@@ -1,1 +1,781 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin:0;   
+  background-color: white;
+  text-decoration: none;
+    list-style: none;
+  }
+  
+  .principal {
+    display: grid;
+    height: auto;        
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 68px 68px;
+    text-align: center;
+  }
+
+  .principal div{
+    text-align: center;
+    color: white;
+    border:none;
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .logo_ap{
+    position: fixed;
+    width: 23%;
+    height: auto;
+    float: left;    
+  }
+  #rc_logo {
+   left: -20px;
+   top: -55px;
+   width:25%;
+   height: 9.25%;
+   padding: 8px 0 0 0;
+   position: absolute;
+   color: #fff;
+   font-size: 19px;
+   font-family: Poppins;
+   text-decoration: none;   
+  }
+  
+  #rc_logo a { 
+  color: inherit; 
+  text-decoration: none;
+  } 
+  /***************************  Menú Navegación Resp.  ************************/
+  
+  nav{
+    height: 68px;
+    width: 100%;
+}
+
+  ul{
+    padding-top: 25px;
+  }
+.enlace{
+    position: absolute;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+.logo{
+    position: relative;
+    height: 40px;
+    right: 20px;
+    
+}
+nav ul{
+    position: relative;
+    float: right;
+    margin-right: 40px;
+    z-index: 1;
+    top: -28px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 40px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #000090;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+
+
+@media (max-width: 1000px){
+    .enlace{
+        padding-left: 20px;
+    }
+    ul{
+      width: 86%;
+      padding-top: 25px;
+    }
+    nav ul li a{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 900px){
+  .enlace{
+      padding-left: 20px;
+  }
+  ul{
+    width:90%;
+    padding-top: 25px;
+  }
+  nav ul li a{
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #00358e;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+  
+  
+  
+              /* BOTON LOGIN (DERECHA) */
+  
+  .extra {
+    display: flex;
+    width: 50%;    
+    padding: 25px 10px 10px 25px;
+  }
+  .btn1 {
+    display: block;
+     position: absolute;
+     height: 30px;
+     top: 2.7%;
+     right: 5%;
+   }
+  .boton {
+    width: 120%;
+    height: 90%;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 2px solid;
+    border-color: #318aac;
+   }
+   
+
+  .boton:hover, .boton:focus {
+    color: #fff;
+    background-color: #3498db;
+    outline: 0;
+  }
+.login {
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #00358e inset, 0 0 0 0 #3498db;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.login:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #04204f;
+}
+
+/* FORMULARIO LOGIN + CLOSE*/
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  width: 25rem;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0.625rem;
+}
+
+.box h2 {
+  margin: 0 0 1.875rem;
+  padding: 0;
+  color: #fff;
+  text-align: center;  
+}
+
+.box .inputBox {
+  position: relative;
+}
+
+.box .inputBox input {
+  width: 100%;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.062rem;
+  margin-bottom: 1.875rem;
+  border: none;
+  border-bottom: 0.065rem solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;   
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value=""]) ~ label {
+  top: -1.125rem;
+  left: 0;
+  color: #03a9f4;
+  font-size: 0.75rem;
+}
+
+.box input[type="submit"] {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #00358e;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  border-radius: 0.312rem;
+  font-size: 1rem;
+}
+
+.box input[type="submit"]:hover {
+  background-color: #1cb1f5;
+}
+
+.modalContainer {
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modalContainer .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-top: 10px solid #58abb7;
+  width: 60%;
+}
+
+.modalContainer .close {   /*"close" permite cerrar el formulario de login*/
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  left: 360px;
+  top: 10px;
+}
+
+.modalContainer .close:hover,
+.modalContainer .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo_ap{
+  position: relative;
+  height: 290px;
+  width: 190px;
+  margin: 50px 20px;
+  float: left;
+}
+.logo_ap img{
+  position: absolute;
+  left: 0;
+  transition: opacity 1.0s ease-in-out;
+}
+.logo_ap img.top:hover {
+  opacity:0;
+}
+
+.textoyfoto {
+  font-size: 18px;
+  margin: 15px ;
+  border: none;
+  width: 80vw;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  padding: 5px 25px 0 0;
+  line-height: 200%
+}
+.textoyfoto img {
+  width: 920px;
+  border:none;
+}
+.textoyfoto h1 {
+  padding: 10px 0 0 25px;
+  border:none;
+  width: 70%;
+}
+
+/************   A C E R C A    D E    ************/
+
+.textoyfoto2 {
+  font-size: 18px;
+  margin: 15px ;
+  border: none;
+  width: 85vw;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  padding: -5px 25px 0 0;
+  line-height: 200%
+}
+.textoyfoto2 img {
+  position: relative;
+  display: inline-flex;
+  background-color: #D8F3F3;
+  width: 125px;
+  border: 4px solid #00358e;
+  border-radius: 50%;
+  padding: 20px 0 0 2px;
+  left: 10px;
+  top: -150px;
+}
+.textoyfoto2 h1 {
+  padding: 10px 0 0 25px;
+  border: none;
+  width: 70%;
+}
+.acercade {
+  position: relative;
+  top: -190px;
+}
+#prf {
+  width: 45vw;
+  font-size: 20px;
+  line-height: 200%;
+  text-align: center;
+}
+
+@media screen and (max-width: 930px) {
+  .textoyfoto2 img {
+    top: -170px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .textoyfoto2 img {
+    top: -220px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .textoyfoto2 img {
+    top: -230px;
+  }
+}
+
+.izquierda {
+  background-color: #00358e;
+}
+.centro {
+  background-color: #00358e;
+}
+.derecha {
+  background-color: #00358e;
+}
+
+.form1 {
+  color: #00358e;
+}
+/*                             FORMACION PROFESIONAL 
+                      ----------------------------------------*/
+.secundaria {
+  background-color: lightcyan;
+  width: 100 vw;
+}
+
+.secundaria p{
+  font-size: 18px;
+  margin: 0 auto;
+  width: 80vw;
+  height: 10vh;
+  display: grid;
+
+  align-items: center;
+  padding: 5px 75px 0 0;  
+}
+.secundaria h1, h2 {
+  position: relative;
+  padding: 15px 0 0 25px;
+  top: 10px;
+}
+
+.habilidades {
+  background-color: #fff;
+  width: 100 vw;
+}
+.habilidades h1 {  
+  padding: 0 0 0 25px;
+}
+
+
+                       /* BARRAS DE PROGRESO CIRCULARES */
+.habilidades {
+  height: 100vh;
+}
+.habilidades {
+  width: 98vw;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  min-height: 98vh;
+  background: white;
+}
+.habilidades h1{
+  padding: 40px 0 0 25px;
+}
+.flex-container{
+  position: relative;
+  width: 98vw;
+  display: inline-flex;  
+  justify-content: space-around;
+  padding: 0 1px;
+}
+
+.flex-container .card{
+  position: relative;
+  width: 200px;  
+  background-color: rgba(0,0,0,0.5);
+  display: inline-flex;
+  justify-content:center;
+  align-items: center;
+  height: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.5s;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 25px;
+}
+
+.flex-container .card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+}
+
+.flex-container .card::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50;
+  width: 100%;
+  height:100%;
+  background: white;
+  pointer-events: none;
+  z-index: 1;
+}
+.porcent{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 50px #fff;
+  background: rgb(255,255,255);
+  z-index: 1000;
+}
+
+.porcent .number{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-radius: 50%;
+}
+.porcent .number h2{
+  color: #000;
+  font-weight: 700;
+  font-size: 40px;
+  transition: 0.5s;
+}
+
+.card:hover .porcent .number h2{
+  color: rgb(0,0,0);
+  font-size: 48px;
+}
+.porcent .number h2 span{
+  color: rgb(0,0,0);
+}
+
+.text{
+  position: relative;
+  color: rgb(0,0,0);
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+svg{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(-90deg)!important;
+}
+
+svg circle{
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: darkcyan;
+  stroke-width: 10;
+  stroke-linecap: round !important;
+  transform: translate(5px, 5px);
+}
+
+/*Cálculo para simular el porcent*/
+svg circle:nth-child(2){
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+
+.card:nth-child(1) svg circle:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 80)/100);
+  stroke: rgb(0,53,142);
+}
+.card:nth-child(2) svg circle:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 40)/100);
+  stroke: rgb(0,53,142);
+}
+.card:nth-child(3) svg circle:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 50)/100);
+  stroke: rgb(0,53,142);
+}
+.card:nth-child(4) svg circle:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 30)/100);
+  stroke: rgb(0,53,142);
+}
+
+      /* HABILIDADES */
+
+@media screen and (max-width: 700px){
+
+  .flex-container{
+    flex-direction: column;
+    display: inline-block;
+    justify-content: center;
+  }
+  .flex-container .card{
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+@media screen and (max-width: 600px){
+  
+  .flex-container {    
+    padding: 1px;
+    flex-direction: column;
+    display: inline-block;
+    justify-content: center;
+  }
+  .flex-container .card {    
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .flex-container{
+    display: inline-grid;
+    
+  }
+  .flex-container .card{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+/*   P R O Y E C T O S   */
+.proyecto {
+  
+  height: 90vh;
+  display: flex;
+}
+.proyecto {
+  width: 97vw;  
+  min-height: 98vh;
+  background: lightcyan;
+}
+.proyecto, h1{
+  padding: 1px 0 0 25px;
+  font-size: 42px;
+}
+
+.proyecto h2{
+  padding: 60px 0 0 10px;
+  font-size: 32px;
+  left: -20px;
+}
+
+/* TEXTO CON SOMBRA */
+
+.hit-the-floor {
+  color: #fff;
+  font-size: 9vw;
+  font-weight: bold;
+  font-family: Helvetica;
+  text-shadow: 0 1px 0 #00f, 0 2px 0 #4d4dfd, 0 3px 0 #7272fc, 0 4px 0 #8787fc, 0 5px 0 #a5a5fc, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);  
+}
+  
+  .hit-the-floor {
+    position: relative;
+    text-align: center;
+    left: 10px;
+    top: -25px;
+    line-height: 100%;
+  }
+
+  /* PROJECT CARD
+  -------------------------------------- */
+
+  .row {
+    position: relative;
+    display: grid;
+    text-align: center;
+    width: 400px;
+    height: 83%;
+    border: 4px none;
+    padding-left: 30px;
+    padding-top: 100px;
+    left: 25px;
+    font-size: 18px;
+  }
+  .row img {
+    width: 70%;
+    height: 100%;
+  }
+  .row p {
+    padding-right: 20px;
+    padding-bottom: 25px;
+    line-height: 140%;
+  }
+  .row h1, h2{
+    display: block;
+  }
+  @media screen and (max-width: 650px){
+    .row {
+      left: -50px;
+    }
+  }
+  #aes {
+    display: inline-flex;
+  }
+
+  div [class^="col-"]{
+    padding-left:5px;
+    padding-right:5px;
+    height: auto;
+  }
+  .row .card{
+    transition:0.5s;
+    cursor:pointer;
+  }
+  .row .card-title{  
+    font-size:15px;
+    transition:1s;
+    cursor:pointer;
+  }
+  .row .card-title i{  
+    font-size:15px;
+    transition:1s;
+    cursor:pointer;
+    color:#ffa710
+  }
+  .row .card-title i:hover{
+    transform: scale(1.25) rotate(100deg); 
+    color:#18d4ca;
+    
+  }
+  .row .card:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+  }
+  .row .card-text{
+    height:80px;  
+  }
+  
+  .row .card::before, .row .card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale3d(0, 0, 1);
+    transition: transform .3s ease-out 0s;
+    background: rgba(255, 255, 255, 0.1);
+    content: '';
+    pointer-events: none;
+  }
+  .row .card::before {
+    transform-origin: left top;
+  }
+  .row .card::after {
+    transform-origin: right bottom;
+  }
+  .row .card:hover::before, .raw .card:hover::after, .raw .card:focus::before, .raw .card:focus::after {
+    transform: scale3d(1, 1, 1);
+  }
+
+  
+  h3 {
+    text-align: center;
+  }
+  

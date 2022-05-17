@@ -1,0 +1,71 @@
+<div class="principal">
+
+  <div class="izquierda">
+    <div class="logo_ap" id="rc_logo">        
+      <img src="./picture/APLogo_2b.png" alt="Argentina Programa">
+      <img class="top" src="./picture/APLogo_2.png" alt="Argentina Programa">
+    </div> 
+  </div>
+  
+  
+  <div class="centro">
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+          <img src="./picture/logo.png" alt="" class="logo">
+      </label>
+     
+      <ul>
+          <li><a class="active" href="#">Inicio</a></li>
+          <li><a href="#home">Acerca de</a></li>
+          <li><a href="#formacion">Educación</a></li>
+          <li><a href="#habilidad">Habilidades</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+      </ul>
+  </nav>
+  </div>
+  
+
+  <div class="derecha">
+    
+            <!-- LOGIN -->
+    <div class="btn1">
+      <button class="boton login" id="btnModal">
+        Login
+      </button>
+      <a href="https://www.facebook.com/Fabio.de.San.Juan" 
+      target="_blank" rel="noopener noreferrer">
+        <img class="extra" src="./picture/facebook.png" alt="facebook">
+      </a>
+      <a href="https://github.com/fabiobustos-sanjuan" target="_blanck" rel="noopener noreferrer">
+        <img class="extra" src="./picture/github.png" alt="github">
+      </a>
+      <a href="https://www.linkedin.com/in/fabian-bustos-sanjuan/" target="_blanck" rel="noopener noreferrer">
+        <img class="extra" src="./picture/inkedin logo.png" alt="linkedin">
+      </a>
+    </div>
+          
+    <div id="myModal" class="modalContainer">
+      <div class="box">
+        <span class="close">×</span>
+        <h2>Login</h2>    
+        <form class="form1">      
+          <div class="inputBox">
+            <input type="email" name="email" required 
+            onkeyup="this.setAttribute('value', this.value);" value="">
+            <label>Username</label>
+          </div>
+          <div class="inputBox">
+            <input type="password" name="password" required value=""
+                onkeyup="this.setAttribute('value', this.value);"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Debe contener al menos un número y una letra
+                mayúscula y minúscula, y una longitud de 8 o más caracteres">
+            <label>Password</label>
+          </div>
+          <input type="submit" name="sign-in" value="Sign In">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
