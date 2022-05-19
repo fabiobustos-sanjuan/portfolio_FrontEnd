@@ -1,6 +1,6 @@
 body {
   margin:0;   
-  background-color: white;
+  background-color: transparent;
   text-decoration: none;
     list-style: none;
   }
@@ -71,7 +71,7 @@ nav ul{
     float: right;
     margin-right: 40px;
     z-index: 1;
-    top: -28px;
+    top: -14px;
 }
 
 nav ul li{
@@ -81,7 +81,7 @@ nav ul li{
 }
 nav ul li a{
     color: #fff;
-    font-size: 18px;
+    font-size: 14px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
@@ -167,17 +167,17 @@ li a.active, li a:hover{
   
               /* BOTON LOGIN (DERECHA) */
   
-  .extra {
-    display: flex;
-    width: 50%;    
-    padding: 25px 10px 10px 25px;
-  }
+  
   .btn1 {
     display: block;
      position: absolute;
      height: 30px;
      top: 2.7%;
      right: 5%;
+   }
+   .btn1 img{
+     display: flex;
+     z-index: 1;
    }
   .boton {
     width: 120%;
@@ -650,7 +650,8 @@ svg circle:nth-child(2){
   display: flex;
 }
 .proyecto {
-  width: 97vw;  
+  width: 97vw;
+  height:auto;
   min-height: 98vh;
   background: lightcyan;
 }
@@ -687,7 +688,7 @@ svg circle:nth-child(2){
   -------------------------------------- */
 
   .row {
-    position: relative;
+    position: absolute;
     display: grid;
     text-align: center;
     width: 400px;
@@ -710,14 +711,28 @@ svg circle:nth-child(2){
   .row h1, h2{
     display: block;
   }
-  @media screen and (max-width: 650px){
+
+  @media (min-width: 768px){
+    .col-sm-6 {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 576px){
+      .col-sm-6 {
+        flex: 0 0 auto;
+        width: 101%;
+      }
+   }
+  /*@media screen and (max-width: 650px){
     .row {
       left: -50px;
     }
   }
   #aes {
     display: inline-flex;
-  }
+  }*/
 
   div [class^="col-"]{
     padding-left:5px;
