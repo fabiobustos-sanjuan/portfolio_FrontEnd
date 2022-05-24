@@ -1,6 +1,32 @@
 {
-	"name": "Fabián Enrique Bustos",
-	"titulo1": "Analista Programador",
-  "titulo2": "Analista de Sistemas en Computación",
-	"ubicacion": "San Juan - Argentina"
+	"name": "Fabián Bustos",
+	"ubicacion": "San Juan - Argentina",
+	"education": [{
+		"school":"Escuela Normal Superior General Manuel Belgrano",
+		"title":"Analista",
+		"img":"url",
+		"career":"Analista en Sistemas de Computación",
+		"start":"2000",
+		"end":"2001"
+	},
+	{
+		"school":"Escuela Normal Superior General Manuel Belgrano",
+		"title":"Analista",
+		"img":"url",
+		"career":"Analista Programador",
+		"start":"1998",
+		"end":"2000"
+	},
+	{
+		"school":"Escuela Nacional de Educación Técnica E.N.E.T. N° 1",
+		"title":"Técnico",
+		"img":"url",
+		"career":"Técnico Mecánico O.M.A.",
+		"start":"1986",
+		"end":"1991"
+	}],
+	"project": [{
+		"portfolio": "Portfolio Personal Responsive, diseñado en Html, Css y Java Script",
+		"img":"url"
+	}] 
 }

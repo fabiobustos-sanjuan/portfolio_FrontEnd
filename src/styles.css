@@ -54,6 +54,7 @@ body {
 
   ul{
     padding-top: 25px;
+    list-style-type: none;
   }
 .enlace{
     position: absolute;
@@ -135,7 +136,7 @@ li a.active, li a:hover{
     .checkbtn{
         display: block;
     }
-    ul{
+    nav ul{
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -381,9 +382,10 @@ li a.active, li a:hover{
   top: -150px;
 }
 .textoyfoto2 h1 {
-  padding: 10px 0 0 25px;
+  padding-top:10px;
   border: none;
   width: 70%;
+  left: 15px;
 }
 .acercade {
   position: relative;
@@ -437,26 +439,23 @@ li a.active, li a:hover{
 .secundaria p{
   font-size: 18px;
   margin: 0 auto;
-  width: 80vw;
   height: 10vh;
   display: grid;
-
   align-items: center;
-  padding: 5px 75px 0 0;  
 }
-.secundaria h1, h2 {
+.secundaria h1, h2, h3, p {
   position: relative;
-  padding: 15px 0 0 25px;
   top: 10px;
+}
+.secundaria h1{
+  left:25px;
 }
 
 .habilidades {
   background-color: #fff;
   width: 100 vw;
 }
-.habilidades h1 {  
-  padding: 0 0 0 25px;
-}
+
 
 
                        /* BARRAS DE PROGRESO CIRCULARES */
@@ -474,15 +473,17 @@ li a.active, li a:hover{
 .habilidades h1{
   padding: 40px 0 0 25px;
 }
-.flex-container{
+.habilidades .flex-container{
   position: relative;
   width: 98vw;
-  display: inline-flex;  
+  display: inline-block;
+  flex-direction:column;
   justify-content: space-around;
   padding: 0 1px;
+  text-align: center;
 }
 
-.flex-container .card{
+.habilidades .flex-container .card{
   position: relative;
   width: 200px;  
   background-color: rgba(0,0,0,0.5);
@@ -494,28 +495,28 @@ li a.active, li a:hover{
   cursor: pointer;
   text-align: center;
   transition: 0.5s;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 25px;
+  margin-right: 25px;
   margin-top: 25px;
 }
 
-.flex-container .card:hover{
+.habilidades .flex-container .card:hover{
   transform: translateY(-10px);
   box-shadow: 0 15px 25px rgba(0,0,0,0.5);
 }
 
-.flex-container .card::before{
+.habilidades .flex-container .card::before{
   content: '';
   position: absolute;
   top: 0;
   left: -50;
   width: 100%;
   height:100%;
-  background: white;
+  background: #A9CCE3;
   pointer-events: none;
   z-index: 1;
 }
-.porcent{
+.habilidades .porcent{
   position: relative;
   width: 150px;
   height: 150px;
@@ -525,7 +526,7 @@ li a.active, li a:hover{
   z-index: 1000;
 }
 
-.porcent .number{
+.habilidades .porcent .number{
   position: absolute;
   top: 0;
   left: 0;
@@ -536,22 +537,22 @@ li a.active, li a:hover{
   align-items: center;
   border-radius: 50%;
 }
-.porcent .number h2{
+.habilidades .porcent .number h2{
   color: #000;
   font-weight: 700;
   font-size: 40px;
   transition: 0.5s;
 }
 
-.card:hover .porcent .number h2{
+.habilidades .card:hover .porcent .number h2{
   color: rgb(0,0,0);
   font-size: 48px;
 }
-.porcent .number h2 span{
+.habilidades .porcent .number h2 span{
   color: rgb(0,0,0);
 }
 
-.text{
+.habilidades .text{
   position: relative;
   color: rgb(0,0,0);
   margin-top: 20px;
@@ -579,31 +580,223 @@ svg circle{
   transform: translate(5px, 5px);
 }
 
-/*Cálculo para simular el porcent*/
+/* Cálculo Habilidades duras */
+
 svg circle:nth-child(2){
   stroke-dasharray: 440;
   stroke-dashoffset: 440;
 }
 
-
-.card:nth-child(1) svg circle:nth-child(2){
+.habilidades .card:nth-child(1) svg circle:nth-child(2){
   stroke-dashoffset: calc(440 - (440 * 80)/100);
   stroke: rgb(0,53,142);
 }
-.card:nth-child(2) svg circle:nth-child(2){
+.habilidades .card:nth-child(2) svg circle:nth-child(2){
   stroke-dashoffset: calc(440 - (440 * 40)/100);
   stroke: rgb(0,53,142);
 }
-.card:nth-child(3) svg circle:nth-child(2){
+.habilidades .card:nth-child(3) svg circle:nth-child(2){
   stroke-dashoffset: calc(440 - (440 * 50)/100);
   stroke: rgb(0,53,142);
 }
-.card:nth-child(4) svg circle:nth-child(2){
+.habilidades .card:nth-child(4) svg circle:nth-child(2){
   stroke-dashoffset: calc(440 - (440 * 30)/100);
   stroke: rgb(0,53,142);
 }
 
+
+/* Cálculo Habilidades blandas */
+
+.habilidadesB {
+  height: 100vh;
+}
+.habilidadesB {
+  width: 98vw;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  min-height: 98vh;
+  background: white;
+}
+.habilidadesB h1{
+  padding: 40px 0 0 25px;
+}
+.habilidadesB .flex-container{
+  position: relative;
+  width: 98vw;
+  display: inline-block;
+  flex-direction:column;
+  justify-content: space-around;
+  padding: 0 1px;
+  text-align: center;
+}
+
+.habilidadesB .flex-container .card{
+  position: relative;
+  width: 200px;  
+  background-color: rgba(0,0,0,0.5);
+  display: inline-flex;
+  justify-content:center;
+  align-items: center;
+  height: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.5s;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 25px;
+}
+
+.habilidadesB .flex-container .card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+}
+
+.habilidadesB .flex-container .card::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50;
+  width: 100%;
+  height:100%;
+  background: #E8F8F5;
+  pointer-events: none;
+  z-index: 1;
+}
+.habilidadesB .porcent{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 50px #fff;
+  background: rgb(255,255,255);
+  z-index: 1000;
+}
+
+.habilidadesB .porcent .number{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-radius: 50%;
+}
+.habilidadesB .porcent .number h2{
+  color: #000;
+  font-weight: 700;
+  font-size: 40px;
+  transition: 0.5s;
+}
+
+.habilidadesB .card:hover .porcent .number h2{
+  color: rgb(0,0,0);
+  font-size: 48px;
+}
+.habilidadesB .porcent .number h2 span{
+  color: rgb(0,0,0);
+}
+
+.habilidadesB .text{
+  position: relative;
+  color: rgb(0,0,0);
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+svg{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(-90deg)!important;
+}
+
+svg circle{
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #D5DBDB;
+  stroke-width: 10;
+  stroke-linecap: round !important;
+  transform: translate(5px, 5px);
+}
+
+/* Cálculo habilidades duras */
+
+svg circle:nth-child(2){
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+.habilidadesB .card:nth-child(1) svg circle:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 85)/100);
+  stroke: rgb(133, 193, 233);
+}
+.habilidadesB .card:nth-child(2) svg circle:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 80)/100);
+  stroke: rgb(133, 193, 233);
+}
+.habilidadesB .card:nth-child(3) svg circle:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 90)/100);
+  stroke: rgb(133, 193, 233);
+}
+.habilidadesB .card:nth-child(4) svg circle:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 90)/100);
+  stroke: rgb(133, 193, 233);
+}
+
+#soft{
+  display:flex;
+  justify-content:left;
+  left:25px;
+}
+
       /* HABILIDADES */
+@media screen and (max-width: 1150px){
+
+  .flex-container{
+    flex-direction: column;
+    display: inline-block;
+    justify-content: center;
+  }
+  .flex-container .card{
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+
+@media screen and (max-width: 900px){
+
+  .flex-container{
+    flex-direction: column;
+    display: inline-block;
+    justify-content: center;
+  }
+  .flex-container .card{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 800px){
+
+  .flex-container{
+    flex-direction: column;
+    display: inline-block;
+    justify-content: center;
+  }
+  .flex-container .card{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
 
 @media screen and (max-width: 700px){
 
@@ -647,7 +840,7 @@ svg circle:nth-child(2){
 .proyecto {
   
   height: 90vh;
-  display: flex;
+  display: inline-flex;
 }
 .proyecto {
   width: 97vw;
@@ -656,7 +849,7 @@ svg circle:nth-child(2){
   background: lightcyan;
 }
 .proyecto, h1{
-  padding: 1px 0 0 25px;
+  padding: 1px 0 0 0;
   font-size: 42px;
 }
 
@@ -725,15 +918,7 @@ svg circle:nth-child(2){
         width: 101%;
       }
    }
-  /*@media screen and (max-width: 650px){
-    .row {
-      left: -50px;
-    }
-  }
-  #aes {
-    display: inline-flex;
-  }*/
-
+  
   div [class^="col-"]{
     padding-left:5px;
     padding-right:5px;

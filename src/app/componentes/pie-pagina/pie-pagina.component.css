@@ -1,5 +1,16 @@
+  .row-2{
+    background:#fff;
+  }
+  footer{
+    color: grey;
+    font-size:16px;
+    display:flex;
+    flex-direction:column;
+    text-align:center;    
+  }
+
 .separa {
-  border: 10px solid #00358e;
-  width: 93%;
-  border-radius: 50%;
-}
+    border: 10px solid #00358e;
+    width: 93%;
+    border-radius: 50%;
+  }

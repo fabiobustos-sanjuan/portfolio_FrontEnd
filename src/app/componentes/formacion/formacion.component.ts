@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formacion.component.css']
 })
 export class FormacionComponent implements OnInit {
-  miPortfolio:any;
+  educacionList:any;
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data =>{
       console.log(data);
-      this.miPortfolio=data;
+      this.educacionList=data.education;
     });
   }
 

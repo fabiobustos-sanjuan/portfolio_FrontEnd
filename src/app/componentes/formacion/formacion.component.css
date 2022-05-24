@@ -1,0 +1,12 @@
+h2, h3, p{
+  padding: 10px 0 10px 0;
+  left: 36px;
+  font-weight: bold;
+  text-align: left;
+}
+
+hr{
+  border: 2px solid cyan;
+  border-radius: 50%;
+  width:93%;
+}

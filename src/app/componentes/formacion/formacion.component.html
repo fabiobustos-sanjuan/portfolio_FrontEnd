@@ -1,5 +1,22 @@
 <main class="secundaria">
+  <div class="card-titles">
   <a name="formacion"><h1>Formación Profesional</h1></a>
+  <div class="btn-edit">
+    <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
+  </div>
+  </div>
+  <div clas="lista">
+  <ul>
+    <li *ngFor="let educacion of educacionList">
+      <h2>{{educacion.school}}</h2>
+      <h3>{{educacion.career}}</h3>
+      <p>{{educacion.start}} - {{educacion.end}}</p>
+      <hr>
+    </li>
+  </ul>
+</div>
+
+  <!--
   <br>
   <h2>INTI</h2>
   <h3 style="text-align: left; padding:20px">Full Stack Developer</h3>
@@ -8,12 +25,13 @@
   <hr class="separa">
   <br>
   <h2>Colegio Superior Gral. Manuel Belgrano</h2>
-  <h3 style="text-align: left; padding:20px">{{miPortfolio.titulo1}}</h3>
+  <h3 style="text-align: left; padding:20px">{{educacionList.titulo1}}</h3>
   <p style="padding:0%">1998 - 2000</p>
   <br>
   <hr class="separa">
   <br>
   <h2>Colegio Superior Gral. Manuel Belgrano</h2>
-  <h3 style="text-align: left; padding:20px">{{miPortfolio.titulo2}}</h3>
+  <h3 style="text-align: left; padding:20px">{{educacionList.titulo2}}</h3>
   <p style="padding:0%">2000 - 2001</p>
+  -->
 </main>
