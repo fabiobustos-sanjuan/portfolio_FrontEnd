@@ -1,0 +1,27 @@
+h1{
+  display: block;
+  position:relative;
+  padding: 25px;
+}
+h2 {
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  color: #ABB2B9;
+}
+.progress-container{
+  position: relative;
+  display:flex;  
+  justify-content:space-around;
+  background-color:white;
+  text-align: center;
+}
+
+.progress-container ul {
+  display: block;
+  padding:0;
+}
+
+.progress-container li {
+  display: inline-flex;
+  margin-bottom: 10px;
+}

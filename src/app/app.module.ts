@@ -7,10 +7,14 @@ import { EncabezadoComponent } from './componentes/encabezado/encabezado.compone
 import { LogoComponent } from './componentes/logo/logo.component';
 import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
 import { FormacionComponent } from './componentes/formacion/formacion.component';
-import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { PiePaginaComponent } from './componentes/pie-pagina/pie-pagina.component';
 import {HttpClientModule} from '@angular/common/http';
+
+// Import ng-circle-progress
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { HysComponent } from './componentes/hys/hys.component';
+import { ScrollToTopComponent } from './componentes/scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +23,18 @@ import {HttpClientModule} from '@angular/common/http';
     LogoComponent,
     AcercaDeComponent,
     FormacionComponent,
-    HabilidadesComponent,
     ProyectosComponent,
-    PiePaginaComponent
+    PiePaginaComponent,
+    HysComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+
+    // Specify ng-circle-progress as an import
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]

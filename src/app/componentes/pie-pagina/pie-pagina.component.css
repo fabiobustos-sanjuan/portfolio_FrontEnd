@@ -14,3 +14,26 @@
     width: 93%;
     border-radius: 50%;
   }
+
+  /* Botón Ir Arriba */
+
+  #myBtn {
+  display: none; 
+  width: 60px;
+  position: fixed; 
+  bottom: 20px; 
+  right: 10px; 
+  z-index: 99; 
+  border: 2px solid #fff; 
+  outline: none; 
+  background-color: #00358e; 
+  color: white; 
+  cursor: pointer;
+  padding: 15px; 
+  border-radius: 50%; 
+  font-size: 26px; 
+}
+
+#myBtn:hover {
+  background-color: #3498db;
+}

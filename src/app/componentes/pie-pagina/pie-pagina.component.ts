@@ -1,14 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-pie-pagina',
   templateUrl: './pie-pagina.component.html',
-  styleUrls: ['./pie-pagina.component.css']
+  styleUrls: ['./pie-pagina.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PiePaginaComponent implements OnInit {
 
-  constructor() { }
+  @Output() scrollToTop = new EventEmitter<void>();
 
+ constructor() { }
+
+ onScrollToTop(): void {
+  this.scrollToTop.emit();
+}
   ngOnInit(): void {
   }
 

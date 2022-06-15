@@ -1,16 +1,23 @@
-<div class="proyecto">
-  <a id="aes" name="proyectos"><h1>Proyectos</h1></a>
-  
-  <div class="row">
-    <div class="col-md-3 col-sm-6">
-      <div class="card card-block">
-        <h4>Portfolio Personal</h4>
-        <img src="../../../assets/picture/proyecto01.png" alt="Portfolio project" 
-        class="resp">
-        <p class="card-text">{{projectList[0].portfolio}}</p> 
-      </div>
-    </div>
-    <br><br>
+<div class="project-ppal">
+<a name="proyectos"></a>
+  <h1>Proyectos</h1>
+  <div class="project-container">
+    <ul>
+      <li *ngFor="let proyecto of projectList">
+        <div class="row">
+          
+            <h4>{{proyecto.name}}</h4>
+            <div class="picture">            
+              <img src="../../../assets/picture/proyecto01.png" alt="Portfolio project">                         
+            </div>
+            <div class="prfo-container">
+              <p>{{proyecto.description}}</p>
+            </div>
+            
+          
+          <br><br>
+        </div>
+      </li>
+    </ul>
   </div>
-
 </div>

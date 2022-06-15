@@ -1,0 +1,46 @@
+<a name="habilidad">
+<h1>Hard Skills</h1>
+  <div class="progress-container">
+      <ul>
+        <li *ngFor="let hys of hysList">
+        <div *ngIf="hys.type == 'hard'">
+          <circle-progress
+            [percent]="hys.perc"
+            [radius]="100"
+            [titleFontSize]="'40'"
+            [titleColor]="'#ABB2B9'"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#00358E'"
+            [innerStrokeColor]="'#C4D7F7'"
+            [animation]="true"
+            [animationDuration]="300"
+          ></circle-progress>
+          <h2>{{hys.name}}</h2>
+        </div>        
+        </li>
+      </ul>
+  </div>
+
+  <h1>Soft Skills</h1>
+  <div class="progress-container">
+      <ul>
+        <li *ngFor="let hys of hysList">
+        <div *ngIf="hys.type == 'soft'">
+          <circle-progress
+            [percent]="hys.perc"
+            [radius]="100"
+            [titleFontSize]="'40'"
+            [titleColor]="'#ABB2B9'"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#85C1E9'"
+            [innerStrokeColor]="'#C4D7F7'"
+            [animation]="true"
+            [animationDuration]="300"
+          ></circle-progress>
+          <h2>{{hys.name}}</h2>
+        </div>        
+        </li>
+      </ul>
+  </div>

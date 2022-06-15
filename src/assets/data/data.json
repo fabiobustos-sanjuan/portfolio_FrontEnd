@@ -1,6 +1,7 @@
 {
-	"name": "Fabián Bustos",
+	"name": "Fabián Enrique Bustos",
 	"ubicacion": "San Juan - Argentina",
+	"picture":"url",
 	"education": [{
 		"school":"Escuela Normal Superior General Manuel Belgrano",
 		"title":"Analista",
@@ -26,7 +27,58 @@
 		"end":"1991"
 	}],
 	"project": [{
-		"portfolio": "Portfolio Personal Responsive, diseñado en Html, Css y Java Script",
+		"name":"Portfolio Personal",
+		"description": "Portfolio Personal Responsive hecho en Html, CSS, JScript y Bootstrap elaborado por tecnología responsive de alto rendimiento.",
 		"img":"url"
-	}] 
+	},
+	{
+		"name":"Portfolio Privado",
+		"description":"Portfolio Público Responsive",
+		"img":"url"
+	},
+	{
+		"name":"Portfolio Público",
+		"description":"Portfolio Público Responsive",
+		"img":"url"
+	}
+	],
+	"hys_skill":[{
+		"type":"hard",
+		"name":"html",
+		"perc":"85"
+	},
+	{	"type":"hard",
+		"name":"css",
+		"perc":"40"
+	},
+	{
+		"type":"hard",
+		"name":"javascript",
+		"perc":"50"
+	},
+	{
+		"type":"hard",
+		"name":"inglés",
+		"perc":"33"		
+	},
+	{
+		"type":"soft",
+		"name":"comunicación",
+		"perc":"85"
+	},
+	{
+		"type":"soft",
+		"name":"liderazgo",
+		"perc":"80"
+	},
+	{
+		"type":"soft",
+		"name":"creatividad",
+		"perc":"90"
+	},
+	{
+		"type":"soft",
+		"name":"adaptabilidad",
+		"perc":"90"
+	}]
 }
