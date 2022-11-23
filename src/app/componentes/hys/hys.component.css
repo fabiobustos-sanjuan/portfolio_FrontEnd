@@ -8,6 +8,18 @@ h2 {
   text-transform: uppercase;
   color: #ABB2B9;
 }
+
+.skills{
+  text-align: center;
+  background-color: #fafafa;
+  border: 4px solid blue;
+  border-radius: 15px;
+}
+
+.btns{
+  text-align: center;
+}
+
 .progress-container{
   position: relative;
   display:flex;  

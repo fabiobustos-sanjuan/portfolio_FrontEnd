@@ -1,7 +1,6 @@
 .centro{
   background-color: #00358e;
 }
-
 /*   R E D E S    S O C I A L E S   */
 .sociales {
   display: inline-grid;
@@ -18,14 +17,6 @@
   height: 100%;
   padding-top:5px;
 }
-
-/*ul {
-  left: 0;
-  display: block;
-  position: absolute;
-  width:86%;
-  height:auto;
-}*/
 
 img {
   max-width: 100%;

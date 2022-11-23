@@ -10,3 +10,10 @@ hr{
   border-radius: 50%;
   width:93%;
 }
+
+.formar{
+  text-align: center;
+  background-color: #fafafa;
+  border: 4px solid blue;
+  border-radius: 15px;
+}

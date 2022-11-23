@@ -1,25 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { persona } from 'src/app/model/persona.model';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { PersonaService } from 'src/app/servicios/persona.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-logo',
   templateUrl: './logo.component.html',
   styleUrls: ['./logo.component.css']
 })
-export class LogoComponent implements OnInit {
-  miPortfolio:any;
-  persona: persona = new persona("","","");
-  /*constructor(private datosPortfolio:PortfolioService) { }*/
-  constructor(public personaService: PersonaService){}
+export class LogoComponent implements OnInit {  
+  //persona: persona = new persona("", "", "", "", "", "");
+  persona: persona = null;
+  
+  constructor(public personaService: PersonaService,
+    private tokenService: TokenService){}
 
-  ngOnInit(): void {
-    /*this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      console.log(data);
-      this.miPortfolio=data;
-    });*/
-    this.personaService.getPersona().subscribe(data => {this.persona = data})
+    isLogged = false;
+
+  ngOnInit(): void {    
+    /*this.personaService.Persona().subscribe(data => {this.persona = data})*/
+    this.cargarPersona();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
+  }
+
+  cargarPersona(): void{
+    this.personaService.detail(1).subscribe(data =>
+      {this.persona = data;})
   }
 
 }

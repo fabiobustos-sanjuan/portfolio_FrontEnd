@@ -1,13 +1,19 @@
 export class persona{
-  id?: number;  /* El signo de pregunta indica que ese dato no es necesario... */
+  id?: number;
   nombre: String;
   apellido: String;
-  img: String;
+  email: String;
+  imgs: String;
+  imgl: String;
+  about: String;
 
-  constructor(nombre: String, apellido: String, img: String){
+  constructor(nombre: String, apellido: String, email: String, imgs: String, imgl:String, about: String){
     this.nombre = nombre;
     this.apellido = apellido;
-    this.img = img;
+    this.email = email;
+    this.imgs = imgs;
+    this.imgl = imgl;
+    this.about = about;
   }
 
 }

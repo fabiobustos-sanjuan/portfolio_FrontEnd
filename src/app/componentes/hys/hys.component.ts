@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Skill } from 'src/app/model/skill';
+import { SSkillService } from 'src/app/servicios/s-skill.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-hys',
@@ -7,14 +9,35 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./hys.component.css']
 })
 export class HysComponent implements OnInit {
-  hysList:any;
-  constructor(private datosPortfolio:PortfolioService) { }
+  skill: Skill[] = [];
+  
+  constructor(private sSkill: SSkillService, private tokenService: TokenService){}
+
+  isLogged = false;
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      console.log(data);
-      this.hysList=data.hys_skill;
-    });
+    this.cargarskill();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
+
+  cargarskill(): void {    
+    this.sSkill.lista().subscribe(data => {this.skill = data;})
+  }
+
+  delete(id?: number){
+    if(id != undefined){
+      this.sSkill.delete(id).subscribe(
+        data => {
+          this.cargarskill();
+        }, err => {
+          alert("No se pudo borrar la skill");
+        }
+      )
+    }
   }
 
 }

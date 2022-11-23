@@ -72,7 +72,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "PortfolioFinal:build:production"
+              "browserTarget": "PortfolioFinal:build:production"              
             },
             "development": {
               "browserTarget": "PortfolioFinal:build:development"

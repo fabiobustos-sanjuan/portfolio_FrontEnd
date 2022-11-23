@@ -1,46 +1,77 @@
 <a name="habilidad">
-<h1>Hard Skills</h1>
-  <div class="progress-container">
+<div class="skills">
+    <div><h1>Hard Skill</h1></div>
+    <button type="button" class="btn btn-dark" routerLink="/nuevaskill" *ngIf="isLogged">
+      Nueva Skill
+    </button>
+    <div class="progress-container">  
       <ul>
-        <li *ngFor="let hys of hysList">
-        <div *ngIf="hys.type == 'hard'">
-          <circle-progress
-            [percent]="hys.perc"
-            [radius]="100"
-            [titleFontSize]="'40'"
-            [titleColor]="'#ABB2B9'"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#00358E'"
-            [innerStrokeColor]="'#C4D7F7'"
-            [animation]="true"
-            [animationDuration]="300"
-          ></circle-progress>
-          <h2>{{hys.name}}</h2>
-        </div>        
-        </li>
+        <div>
+          <li *ngFor="let Skill of skill">
+            <div  *ngIf="(Skill.tipoS | uppercase) == 'HARD'">
+              <circle-progress
+                [percent]="Skill.porcS"
+                [radius]="100"
+                [titleFontSize]="'40'"
+                [titleColor]="'#ABB2B9'"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#00358E'"
+                [innerStrokeColor]="'#C4D7F7'"
+                [animation]="true"
+                [animationDuration]="300"
+              ></circle-progress>
+              <h2>{{Skill.nombreS}}</h2>
+              <div *ngIf="isLogged">
+                <button class="btn btn-light" routerLink="/editskill/{{Skill.id}}">
+                  <i class="bi bi-pencil-fill"></i>Editar
+                </button>
+              </div>
+              <div *ngIf="isLogged">
+                <button class="btn btn-danger" (click)="delete(Skill.id)">
+                  <i class="bi bi-trash"></i>Borrar
+                </button>
+              </div>
+            </div>
+          </li>
+        </div>
       </ul>
   </div>
 
-  <h1>Soft Skills</h1>
-  <div class="progress-container">
+  <div>
+    <div><h1>Soft Skill</h1></div>
+    <div class="progress-container">  
       <ul>
-        <li *ngFor="let hys of hysList">
-        <div *ngIf="hys.type == 'soft'">
-          <circle-progress
-            [percent]="hys.perc"
-            [radius]="100"
-            [titleFontSize]="'40'"
-            [titleColor]="'#ABB2B9'"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#85C1E9'"
-            [innerStrokeColor]="'#C4D7F7'"
-            [animation]="true"
-            [animationDuration]="300"
-          ></circle-progress>
-          <h2>{{hys.name}}</h2>
-        </div>        
-        </li>
+        <div>
+          <li *ngFor="let Skill of skill">
+            <div  *ngIf="(Skill.tipoS | uppercase) == 'SOFT'">
+              <circle-progress
+                [percent]="Skill.porcS"
+                [radius]="100"
+                [titleFontSize]="'40'"
+                [titleColor]="'#ABB2B9'"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#00358E'"
+                [innerStrokeColor]="'#C4D7F7'"
+                [animation]="true"
+                [animationDuration]="300"
+              ></circle-progress>
+              <h2>{{Skill.nombreS}}</h2>
+              <div *ngIf="isLogged">
+                <button class="btn btn-light" routerLink="/editskill/{{Skill.id}}">
+                  <i class="bi bi-pencil-fill"></i>Editar
+                </button>
+              </div>
+              <div *ngIf="isLogged">
+                <button class="btn btn-danger" (click)="delete(Skill.id)">
+                  <i class="bi bi-trash"></i>Borrar
+                </button>
+              </div>
+            </div>
+          </li>
+        </div>
       </ul>
   </div>
+  </div>  
+</div>

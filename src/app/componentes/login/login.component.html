@@ -1,27 +1,4 @@
-<!--
-<div id="myModal" class="modalContainer">
-  <div class="box">
-    <span class="close">×</span>
-    <h2>Login</h2>    
-    <form class="form1">      
-      <div class="inputBox">
-        <input type="email" name="email" required 
-        onkeyup="this.setAttribute('value', this.value);" value="">
-        <label>Username</label>
-      </div>
-      <div class="inputBox">
-        <input type="password" name="password" required value=""
-            onkeyup="this.setAttribute('value', this.value);"
-            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-            title="Debe contener al menos un número y una letra
-            mayúscula y minúscula, y una longitud de 8 o más caracteres">
-        <label>Password</label>
-      </div>
-      <input type="submit" name="sign-in" value="Sign In">
-    </form>
-  </div>
-</div>
--->
+
 <section class="vh-100" style="background-color: #00358e;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -32,25 +9,33 @@
             <h3 class="mb-2">Login</h3>
             <p class="prfo">Ingrese Usuario y Clave</p>
 
-            <div class="form-outline mb-4">
-              <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
-              <label class="form-label" for="typeEmailX-2">Email</label>
-            </div>
+            <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
 
-            <hr class="my-4">
+              <div class="form-outline mb-4">
+                <input type="email" id="nombreUsuario" name="nombreUsuario" 
+                class="form-control form-control-lg" [(ngModel)]="nombreUsuario" required/>
+                <label class="form-label" for="nombreUsuario">Usuario</label>
+              </div>
+  
+              <hr class="my-4">
+  
+              <div class="form-outline mb-4">
+                <input type="password" id="password" name="password" class="form-control form-control-lg" [(ngModel)]="password" required/>
+                <label class="form-label" for="password">Password</label>
+              </div>
+  
+              <!-- Checkbox 
+              <div class="form-check d-flex justify-content-start mb-4">
+                <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                <label class="form-check-label" for="form1Example3"> Recordar password </label>
+              </div>-->
+  
+              <!--<button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>-->
+              <button type="button" class="btn btn-outline-light" (click)="onLogin()">Ingrese</button>
 
-            <div class="form-outline mb-4">
-              <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
-              <label class="form-label" for="typePasswordX-2">Password</label>
-            </div>
+            </form>
 
-            <!-- Checkbox -->
-            <div class="form-check d-flex justify-content-start mb-4">
-              <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
-              <label class="form-check-label" for="form1Example3"> Recordar password </label>
-            </div>
-
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+            
 
           </div>
         </div>

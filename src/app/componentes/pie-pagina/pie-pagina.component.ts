@@ -12,10 +12,7 @@ export class PiePaginaComponent implements OnInit {
 
  constructor() { }
 
- onScrollToTop(): void {
-  this.scrollToTop.emit();
-}
-  ngOnInit(): void {
+ ngOnInit(): void {
   }
 
 }
