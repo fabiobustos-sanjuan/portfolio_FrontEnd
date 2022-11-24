@@ -28,3 +28,16 @@ img {
   height: 100%;
   margin: 5px;
 }
+
+@media (max-width: 720px){
+  .principal {
+    display: grid;
+    height: auto;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 150px 68px;
+  }
+
+  .ocultar {
+    display: none;
+  }
+}
