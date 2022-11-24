@@ -18,7 +18,7 @@ export class LogoComponent implements OnInit {
     isLogged = false;
 
   ngOnInit(): void {    
-    /*this.personaService.Persona().subscribe(data => {this.persona = data})*/
+    
     this.cargarPersona();
     if(this.tokenService.getToken()){
       this.isLogged = true;
