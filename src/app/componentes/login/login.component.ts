@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   password!: string;
   roles: string[] = [];
   errMsj!: string;
-  //constructor(private router: Router) { }
+  
   constructor(private tokenService: TokenService, private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
@@ -46,9 +46,5 @@ export class LoginComponent implements OnInit {
         console.log(this.errMsj);
       })
   }
-
-  /*login(){
-    this.router.navigate(['/login']);
-  }*/
 
 }
