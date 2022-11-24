@@ -52,41 +52,5 @@ img {
     overflow: scroll;
 }
 
-/*.proyecto {
-  display: flex;
-  justify-content: center;
-}
-.proyecto .resp{
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
-#aes{
-  display:inline;
-  position:absolute;
-  width:90%;
-  left:25px;
-}
-.row{
-  display: grid;
-  position: relative;
-  justify-content: center;
-  width: 70%;
-}
-.card{
-  align-items: center;
-  width:80%;
-}
 
-
- @media (min-width: 500px){
-  .col-sm-6 {
-    flex: 0 0 auto;
-    width: 100%;
-  }
-    .row{
-      width: 60%;
-    }
- }
-*/
  
