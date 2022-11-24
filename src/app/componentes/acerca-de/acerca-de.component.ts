@@ -33,7 +33,4 @@ export class AcercaDeComponent implements OnInit {
       {this.persona = data})
   }
 
-  /*ngOnInit(): void {
-    this.personaService.Persona().subscribe(data => {this.persona = data})    
-  }*/
 }
