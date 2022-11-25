@@ -457,12 +457,6 @@ li a.active, li a:hover{
 .secundaria h1{
   left:25px;
 }
-/*
-.habilidades {
-  background-color: #fff;
-  width: 100 vw;
-}
-
 
 
                        /* BARRAS DE PROGRESO CIRCULARES */
@@ -472,108 +466,6 @@ li a.active, li a:hover{
   justify-content:left;
   left:25px;
 }
-
-      /* HABILIDADES 
-@media screen and (max-width: 1150px){
-
-  .flex-container{
-    flex-direction: column;
-    display: inline-block;
-    justify-content: center;
-  }
-  .flex-container .card{
-    margin-left: 25px;
-    margin-right: 25px;
-  }
-}
-
-@media screen and (max-width: 900px){
-
-  .flex-container{
-    flex-direction: column;
-    display: inline-block;
-    justify-content: center;
-  }
-  .flex-container .card{
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
-
-@media screen and (max-width: 800px){
-
-  .flex-container{
-    flex-direction: column;
-    display: inline-block;
-    justify-content: center;
-  }
-  .flex-container .card{
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-}
-
-@media screen and (max-width: 700px){
-
-  .flex-container{
-    flex-direction: column;
-    display: inline-block;
-    justify-content: center;
-  }
-  .flex-container .card{
-    margin-left: 25px;
-    margin-right: 25px;
-  }
-}
-@media screen and (max-width: 600px){
-  
-  .flex-container {    
-    padding: 1px;
-    flex-direction: column;
-    display: inline-block;
-    justify-content: center;
-  }
-  .flex-container .card {    
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 25px;
-  }
-}
-
-@media screen and (max-width: 550px){
-  .flex-container{
-    display: inline-grid;
-    
-  }
-  .flex-container .card{
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-}*/
-
-
-/*   P R O Y E C T O S   
-.proyecto {
-  
-  height: 90vh;
-  display: inline-flex;
-}
-.proyecto {
-  width: 40%;
-  height:auto;
-  min-height: 98vh;
-  background: lightcyan;
-}
-.proyecto, h1{
-  padding: 1px 0 0 0;
-  font-size: 42px;
-}
-
-.proyecto h2{
-  padding: 60px 0 0 10px;
-  font-size: 32px;
-  left: -20px;
-}*/
 
 /* TEXTO CON SOMBRA */
 
