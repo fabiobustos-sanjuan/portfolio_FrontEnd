@@ -592,46 +592,4 @@ li a.active, li a:hover{
     top: -25px;
     line-height: 100%;
   }
-
-  /* PROJECT CARD
-  -------------------------------------- 
-
-  .row {
-    position: absolute;
-    display: grid;
-    text-align: center;
-    width: 400px;
-    height: 83%;
-    border: 4px none;
-    padding-left: 30px;
-    padding-top: 100px;
-    left: 25px;
-    font-size: 18px;
-  }
-  .row img {
-    width: 70%;
-    height: 100%;
-  }
-  .row p {
-    padding-right: 20px;
-    padding-bottom: 25px;
-    line-height: 140%;
-  }
-  .row h1, h2{
-    display: block;
-  }
-
-  @media (min-width: 768px){
-    .col-sm-6 {
-      flex: 0 0 auto;
-      width: 100%;
-    }
-  }
-
-  @media (min-width: 576px){
-      .col-sm-6 {
-        flex: 0 0 auto;
-        width: 101%;
-      }
-   }    
-  */
+  
