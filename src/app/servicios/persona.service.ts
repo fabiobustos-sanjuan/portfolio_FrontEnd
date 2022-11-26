@@ -12,7 +12,9 @@ export class PersonaService {
 //URL = 'http://localhost:8080/personas/' ;
 //URL = 'http://localhost:8080/' ;
 //personaURL = URL + 'personas/' ;
-URL = environment.URL + 'personas/';
+
+//URL = environment.URL + 'personas/';
+URL = 'https://aprograma.herokuapp.com/personas/';
 
   constructor(private httpClient: HttpClient) { }
 
