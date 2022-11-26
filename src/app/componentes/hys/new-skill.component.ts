@@ -11,7 +11,8 @@ import { SSkillService } from 'src/app/servicios/s-skill.service';
 export class NewSkillComponent implements OnInit {
   nombreS: string = '';
   tipoS : string = '';
-  porcS : number = null;
+  //porcS : number = null;
+  porcS : any;
 
   constructor(private sSkill: SSkillService, private router: Router) { }
 
