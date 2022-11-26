@@ -25,7 +25,7 @@ export class NewProyectoComponent implements OnInit {
         alert("Proyecto añadido");
         this.router.navigate(['']);
       }, err => {
-        alert("Falló proyecto");
+        alert("Falló crear proyecto");
         this.router.navigate(['']);
       }
     )
