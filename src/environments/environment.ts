@@ -3,8 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  URL: 'http://localhost:8080/'
+  production: false,  
+  URL: 'https://portfolio-febt2002.koyeb.app/'
+  //URL: 'portfolio-febt2002.koyeb.app/'
+  //URL: 'http://localhost:8080/'
 };
 
 /*

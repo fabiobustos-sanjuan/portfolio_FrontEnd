@@ -14,7 +14,8 @@ export class PersonaService {
 //personaURL = URL + 'personas/' ;
 
 //URL = environment.URL + 'personas/';
-URL = 'https://aprograma.herokuapp.com/personas/';
+//URL = 'https://aprograma.herokuapp.com/personas/';
+URL = 'https://portfolio-febt2002.koyeb.app/auth/';
 
   constructor(private httpClient: HttpClient) { }
 

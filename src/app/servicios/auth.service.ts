@@ -10,7 +10,11 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 })
 export class AuthService {
  //authURL = 'http://localhost:8080/auth/';
- authURL = 'https://aprograma.herokuapp.com/auth/';
+ //authURL = 'https://aprograma.herokuapp.com/auth/';
+ //authURL = 'https://portfolio-febt2002.koyeb.app/auth/'
+ //authURL = 'https://portfolio-backend.portfolio.koyeb/auth/'
+ authURL = 'https://portfolio-febt2002.koyeb.app/auth/';
+ 
 
   constructor(private httpClient: HttpClient) { }
 
