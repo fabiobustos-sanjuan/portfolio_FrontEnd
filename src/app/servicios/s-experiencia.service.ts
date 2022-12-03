@@ -9,7 +9,7 @@ import { Experiencia } from '../model/experiencia';
 export class SExperienciaService {
   //expURL = 'http://localhost:8080/explab/';
   //expURL = 'https://aprograma.herokuapp.com/explab/';
-  expURL = 'https://portfolio-febt2002.koyeb.app/auth/';
+  expURL = 'https://portfolio-febt2002.koyeb.app/explab/';
 
   constructor(private httpClient: HttpClient) { }
 

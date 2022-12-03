@@ -9,7 +9,7 @@ import { Educacion } from '../model/educacion';
 export class SEducacionService {
   //eduURL = 'http://localhost:8080/edu/'
   //eduURL = 'https://aprograma.herokuapp.com/edu/';
-  eduURL = 'https://portfolio-febt2002.koyeb.app/auth/';
+  eduURL = 'https://portfolio-febt2002.koyeb.app/edu/';
 
   constructor(private httpClient: HttpClient) { }
 

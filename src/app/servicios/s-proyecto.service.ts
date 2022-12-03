@@ -9,7 +9,7 @@ import { Proyecto } from '../model/proyecto';
 export class SProyectoService {
   //proyectoURL = 'http://localhost:8080/proyecto/'
   //proyectoURL = 'https://aprograma.herokuapp.com/proyecto/';
-  proyectoURL = 'https://portfolio-febt2002.koyeb.app/auth/';
+  proyectoURL = 'https://portfolio-febt2002.koyeb.app/proyecto/';
   //proyectoURL = URL + 'proyecto/'
 
   constructor(private httpClient: HttpClient) { }

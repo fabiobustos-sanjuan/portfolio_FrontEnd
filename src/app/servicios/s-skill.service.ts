@@ -9,7 +9,7 @@ import { Skill } from '../model/skill';
 export class SSkillService {
   //skillURL = 'http://localhost:8080/skl/'
   //skillURL = 'https://aprograma.herokuapp.com/skl/';
-  skillURL = 'https://portfolio-febt2002.koyeb.app/auth/';
+  skillURL = 'https://portfolio-febt2002.koyeb.app/skl/';
 
   constructor(private httpClient: HttpClient) { }
 
